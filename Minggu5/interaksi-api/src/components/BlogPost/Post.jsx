@@ -1,19 +1,25 @@
 import React from "react";
 
-const Post = (props) => {
+function Post({ judul, isi, hapusArtikel, idArtikel }) {
     return (
-        <div className="artikel">
-            <div className="gambar-artikel">
-            <img src="http://placeimg.com/80/80/tech" alt="Gambar Tumbnail Artikel" />
-            </div>
-                <div className ="konten-artikel">
-                    <div className="judul-artikel">{props.judul} </div>
-                    <p className="isi-artikel">{props.isi}</p>
-                    <button className="btn btn-sm btn-danger" onClick={props.hapusArtikel}>Hapus</button>
-                    </div>
+        <div className="post-artikel">
+            <div className="artikel">
+                <div className="gambar-artikel">
+                    <img src="http://placeimg.com/80/80/tech" alt="thumbnail artikel" />
                 </div>
-        )
-    }
-
+                <div className="konten-artikel">
+                    <div className="judul-artikel">{judul}</div>
+                    <div className="isi-artikel">{isi}</div>
+                    <button
+                        className="btn btn-sm btn-danger"
+                        onClick={hapusArtikel.bind(this, idArtikel)}
+                    >
+                        Hapus
+          </button>
+                </div>
+            </div>
+        </div>
+    );
+}
 
 export default Post;
