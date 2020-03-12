@@ -1,37 +1,25 @@
 import React from "react";
-import "../container/BlogPost/BlogPost.css";
-import { Button, Row, Col } from "react-bootstrap";
 
-const Post = props => {
-    return (
-        <div>
-            <Row className="mahasiswa">
-                <Col className="br" lg={2}>
-                    <h4 className="title">{props.nama}</h4>
-                    <h5 className="subtitle">{props.nim}</h5>
-                </Col>
-                <Col className="br-w" lg={2}>
-                    <h6 className="konten">{props.alamat}</h6>
-                    <h6 className="konten">{props.hp}</h6>
-                </Col>
-                <Col className="br-w" lg={1}>
-                    <h6 className="title">{props.angkatan}</h6>
-                </Col>
-                <Col className="br-w" lg={1}>
-                    <h6 className="title">{props.status}</h6>
-                </Col>
-                <Col lg={3}>
-                    <Button
-                        style={{ marginTop: "10px" }}
-                        variant="danger"
-                        onClick={props.hapusMahasiswa.bind(this, props.idMahasiswa)}
-                    >
-                        Hapus
-          </Button>
-                </Col>
-            </Row>
+function Post({ judul, isi, hapusArtikel, idArtikel }) {
+  return (
+    <div className="post-artikel">
+      <div className="artikel">
+        <div className="gambar-artikel">
+          <img src="http://placeimg.com/80/80/tech" alt="thumbnail artikel" />
         </div>
-    );
-};
+        <div className="konten-artikel">
+          <div className="judul-artikel">{judul}</div>
+          <div className="isi-artikel">{isi}</div>
+          <button
+            className="btn btn-sm btn-danger"
+            onClick={hapusArtikel.bind(this, idArtikel)}
+          >
+            Hapus
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default Post;

@@ -1,34 +1,27 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import * as serviceWorker from './serviceWorker';
-//import HelloComponent from './component/HelloComponent';
-//import StateFullComponent from './container/StateFullComponent';
-//import HelloComponent from './components/HelloComponent.jsx';
+import React from "react";
+import ReactDOM from "react-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
+import Blog from "./pages/Blog";
 
-import BlogPost from "./container/BlogPost/BlogPost";
-
-
-
-// function HelloWorld()
-// {
-//     return <p>ini adalah function component</p>
+// function HelloWorld() {
+//   return <p>Ini adalah function component</p>;
 // }
 
-// const HelloWorld = () =>{
-// return <p> Ini adalah arrow function </p>
+// const HelloWorld = () => {
+//   return <p>Ini adalah function component</p>;
+// };
+
+// class StatefulComponent extends React.Component {
+//   render() {
+//     return <p>ini adalah Stateful Component</p>;
+//   }
 // }
 
-// class Statefullcomponent extends React.Component
-// {
-//     render (){
-//         return <p> Ini adalah Statefull Component</p>
-//     }
-// }
-
-ReactDOM.render(<BlogPost />, document.getElementById('content'));
+// ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<Blog />, document.getElementById("root"));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
